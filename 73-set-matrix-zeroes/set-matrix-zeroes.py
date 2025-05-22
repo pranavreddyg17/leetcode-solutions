@@ -44,3 +44,4 @@ class Solution:
         if colZero:
             for r in range(ROWS):
                 matrix[r][0] = 0
+        return matrix
