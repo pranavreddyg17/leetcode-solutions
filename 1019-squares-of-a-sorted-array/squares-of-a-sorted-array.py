@@ -10,4 +10,5 @@ class Solution:
             else:
                 result.append(nums[right]**2)
                 right -=1
-        return result[::-1]
+        result.reverse()
+        return result
