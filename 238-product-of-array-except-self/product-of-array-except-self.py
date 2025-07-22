@@ -8,6 +8,4 @@ class Solution:
         for i in range(n-2,-1,-1):
             l[i] = l[i]*p
             p = p*nums[i]
-            print(p)
-            print(l[i])
         return l
