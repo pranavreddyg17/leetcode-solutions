@@ -5,14 +5,9 @@ class Solution:
         R = [1]*n
         result = [0]*n
         for i in range(1,n):
-            L[i]=L[i-1]* nums[i-1]
+            L[i]= L[i-1]*nums[i-1]
         for i in range(n-2,-1,-1):
-            R[i]=R[i+1]*nums[i+1]
+            R[i]= R[i+1]*nums[i+1]
         for i in range(n):
             result[i] = L[i]*R[i]
         return result
-
-
-            
-
-        
