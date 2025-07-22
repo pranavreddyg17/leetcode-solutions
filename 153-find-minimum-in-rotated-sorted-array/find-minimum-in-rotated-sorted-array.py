@@ -5,7 +5,7 @@ class Solution:
         r = n-1
         while l<r:
             m = (l+r)//2
-            if nums[m] > nums[r]:
+            if nums[m]>nums[r]:
                 l = m + 1
             else:
                 r = m
