@@ -9,3 +9,4 @@ class Solution:
             else:
                 min_price = price
         return max_profit
+       
