@@ -5,17 +5,19 @@ class Solution:
         r = n-1
         while l<=r:
             m = (l+r)//2
-            if nums[m] == target:
+            if target == nums[m]:
                 return m
-            #search in left sorted part
+            
+            # search in left sorted part
             if nums[l]<=nums[m]:
                 if target > nums[m] or target < nums[l]:
-                    l = m+1
+                    l = m + 1
                 else:
                     r = m-1
-            #search in right sorted part
+
+            # search in rigt sorted part
             else:
-                if target < nums[m] or target > nums [r]:
+                if target > nums[r] or target < nums[m]:
                     r = m-1
                 else:
                     l = m+1
