@@ -8,17 +8,17 @@ class Solution:
             if target == nums[m]:
                 return m
             
-            # search in left sorted part
+            # search in right sorted part
             if nums[l]<=nums[m]:
                 if target > nums[m] or target < nums[l]:
                     l = m + 1
                 else:
-                    r = m-1
-
-            # search in rigt sorted part
+                    r = m - 1
+            
+            # search in left sorted part
             else:
-                if target > nums[r] or target < nums[m]:
-                    r = m-1
+                if target < nums[m] or target > nums[r]:
+                    r = m - 1
                 else:
-                    l = m+1
+                    l = m + 1
         return -1
