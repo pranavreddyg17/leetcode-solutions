@@ -4,9 +4,7 @@ class Solution:
         maxCurr = 1
         minCurr = 1
         for n in nums:
-            if n == 0:
-                maxCurr,minCurr = 1,1
-            temp =maxCurr
+            temp = maxCurr
             maxCurr = max(maxCurr*n,minCurr*n,n)
             minCurr = min(temp*n,minCurr*n,n)
             res = max(res,maxCurr)
