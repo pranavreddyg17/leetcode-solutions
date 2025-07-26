@@ -5,20 +5,20 @@ class Solution:
         r = n-1
         while l<=r:
             m = (l+r)//2
-            if nums[m] == target:
+            if nums[m]==target:
                 return m
-            
-            #search in left sorted part
+
+            # search in left sorted part
             if nums[l]<=nums[m]:
-                if target > nums[m] or target<nums[l]:
+                if target < nums[l] or target > nums[m]:
                     l = m + 1
                 else:
                     r = m - 1
-            
             # search in right sorted part
             else:
-                if target > nums[r] or target < nums[m]:
+                if target < nums[m] or target > nums[r]:
                     r = m - 1
                 else:
                     l = m + 1
         return -1
+
