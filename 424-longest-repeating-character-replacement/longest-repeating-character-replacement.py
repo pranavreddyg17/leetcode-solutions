@@ -10,4 +10,4 @@ class Solution:
                 counts[ord(s[l])-65] -= 1
                 l += 1
             longest = max(longest,(r-l+1))
-        return longest
+        return longest 
