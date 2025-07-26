@@ -1,9 +1,9 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         l = 0
+        n = len(s)
         hashset = set()
         longest = 0
-        n = len(s)
         for r in range(n):
             while s[r] in hashset:
                 hashset.remove(s[l])
