@@ -2,11 +2,13 @@ class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         #Kadane's algorithm
         n = len(nums)
-        currSum = 0
         maxSum = float('-inf')
+        currSum = 0
         for i in range(n):
             currSum += nums[i]
             maxSum = max(maxSum,currSum)
             if currSum < 0:
                 currSum = 0
         return maxSum
+
+            
