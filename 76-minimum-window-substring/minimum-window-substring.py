@@ -2,20 +2,21 @@ class Solution:
     def minWindow(self, s: str, t: str) -> str:
         if t == "" : return ""
         window,countT = {},{}
+        res , resLen = [-1,-1], float('inf')
+        l = 0
         for c in t:
             countT[c] = countT.get(c,0) + 1
-        res,resLen = [-1,-1],float('inf')
-        l = 0
         have, need = 0, len(countT)
         for r in range(len(s)):
             c = s[r]
             window[c] = window.get(c,0) + 1
             if c in countT and window[c] == countT[c]:
                 have += 1
+            
             while have == need:
                 if (r-l+1)<resLen:
-                    resLen = r-l+1
                     res = [l,r]
+                    resLen  = r-l+1
                 window[s[l]] -= 1
                 if s[l] in countT and window[s[l]] < countT[s[l]]:
                     have -= 1
