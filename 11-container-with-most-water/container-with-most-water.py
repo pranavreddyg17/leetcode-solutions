@@ -9,13 +9,13 @@ class Solution:
         # return max_area
 
         n = len(height)
+        max_area = 0
         l = 0
         r = n-1
-        max_area = 0
         while l<r:
-            area = (r-l) * min(height[l],height[r])
+            area = (r-l)* min(height[l],height[r])
             max_area = max(max_area,area)
-            if height[l] <= height[r]:
+            if height[l]<=height[r]:
                 l += 1
             else:
                 r -= 1
