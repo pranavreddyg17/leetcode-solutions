@@ -9,3 +9,4 @@ class Solution:
             elif price<min_price:
                 min_price = price
         return max_profit
+
