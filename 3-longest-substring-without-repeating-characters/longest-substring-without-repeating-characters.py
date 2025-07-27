@@ -12,3 +12,5 @@ class Solution:
             longest = max(longest,w)
             hashset.add(s[r])
         return longest
+
+            
