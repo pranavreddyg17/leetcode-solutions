@@ -8,7 +8,8 @@ class Solution:
         # for i in range(len(s)):
         #     countt[ord(t[i])-ord("a")] += 1
         # return counts == countt
-        counts,countt = {},{}
+
+        counts,countt ={},{}
         for i in range(len(s)):
             counts[s[i]] = counts.get(s[i],0) + 1
             countt[t[i]] = countt.get(t[i],0) + 1
