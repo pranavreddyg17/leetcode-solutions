@@ -12,10 +12,8 @@ class Solution:
             right = right.next
             n -= 1
         while right:
-            left = left.next
             right = right.next
-        # delete
+            left = left.next
+        #delete
         left.next = left.next.next
         return dummy.next
-
-        
