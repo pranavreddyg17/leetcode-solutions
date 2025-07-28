@@ -29,10 +29,9 @@ class Solution:
         stack = [[root,1]]
         res = 1
         while stack:
-            node,depth = stack.pop()
+            node,depth= stack.pop()
             if node:
                 res = max(res,depth)
                 stack.append([node.left,depth+1])
                 stack.append([node.right,depth+1])
         return res
-    
