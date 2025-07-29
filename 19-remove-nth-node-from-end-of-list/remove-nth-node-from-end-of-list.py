@@ -11,9 +11,11 @@ class Solution:
         while n>0 and right:
             right = right.next
             n -= 1
-        while right:
-            right = right.next
+        while left and right:
             left = left.next
+            right = right.next
         #delete
         left.next = left.next.next
         return dummy.next
+
+
