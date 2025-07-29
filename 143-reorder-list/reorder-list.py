@@ -8,11 +8,11 @@ class Solution:
         """
         Do not return anything, modify head in-place instead.
         """
-        slow, fast = head,head.next
+        slow , fast = head, head.next
         while fast and fast.next:
             fast = fast.next.next
             slow = slow.next
-        #reverse second half
+        # reverse second half
         second = slow.next
         slow.next = None
         prev = None
@@ -24,8 +24,8 @@ class Solution:
         # merge two halfs
         first,second = head,prev
         while second:
-            tmp1,tmp2 = first.next, second.next
+            tmp1,tmp2 = first.next,second.next
             first.next = second
             second.next = tmp1
-            first, second = tmp1,tmp2
-            
+            first,second = tmp1,tmp2
+        
