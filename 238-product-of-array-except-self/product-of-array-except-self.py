@@ -2,10 +2,10 @@ class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         n = len(nums)
         l = [1]*n
-        p = nums[n-1]
+        r = nums[n-1]
         for i in range(1,n):
-            l[i] = l[i-1]*nums[i-1]
+            l[i] = l[i-1] * nums[i-1]
         for i in range(n-2,-1,-1):
-            l[i] = p*l[i]
-            p = p*nums[i]
+            l[i] = l[i]*r
+            r = r * nums[i]
         return l
