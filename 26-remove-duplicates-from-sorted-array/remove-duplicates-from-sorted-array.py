@@ -4,8 +4,6 @@ class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         if not nums:
             return 0
-        
-        # pointer to the place to insert the next unique number
         insert_position = 1
         
         for i in range(1, len(nums)):
