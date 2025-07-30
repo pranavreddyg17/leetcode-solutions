@@ -8,8 +8,7 @@ class Solution:
             if (r-l+1) - max(counts) >k:
                 counts[ord(s[l])-65] -= 1
                 l += 1
-            w = (r-l+1)
+            w = r-l+1
             longest = max(longest,w)
         return longest
-
-            
+        
