@@ -13,14 +13,25 @@ class Solution:
         #return 1 + max(self.maxDepth(root.left),self.maxDepth(root.right))
 
         #using bfs
-        q = deque([root])
-        level = 0
-        while q:
-            for i in range(len(q)):
-                node = q.popleft()
-                if node.left:
-                    q.append(node.left)
-                if node.right:
-                    q.append(node.right)
-            level += 1
-        return level
+        # q = deque([root])
+        # level = 0
+        # while q:
+        #     for i in range(len(q)):
+        #         node = q.popleft()
+        #         if node.left:
+        #             q.append(node.left)
+        #         if node.right:
+        #             q.append(node.right)
+        #     level += 1
+        # return level
+
+        #using dfs
+        stack = [[root,0]]
+        res = 0
+        while stack:
+            node,depth = stack.pop()
+            res = max(depth,res)
+            if node:
+                stack.append([node.left,depth+1])
+                stack.append([node.right,depth+1])
+        return res
