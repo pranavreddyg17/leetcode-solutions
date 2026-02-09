@@ -8,6 +8,4 @@ class Solution:
                 return [d[diff],i]
             else:
                 d[nums[i]] = i
-
-            
         
